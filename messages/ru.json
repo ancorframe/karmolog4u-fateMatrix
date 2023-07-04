@@ -4,10 +4,10 @@
     "description": "description"
   },
   "Locale": {
-    "en": "English",
-    "ua": "Ukrainian"
+    "ru": "кацапський",
+    "uk": "Українська"
   },
-  "FateMatrix":{
-    "title":"перевод"
+  "FateMatrix": {
+    "title": "перевод"
   }
 }

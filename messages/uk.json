@@ -4,8 +4,8 @@
     "description": "description"
   },
   "Locale": {
-    "en": "English",
-    "ua": "Ukrainian"
+    "ru": "Російська",
+    "uk": "Українська"
   },
   "FateMatrix": {
     "title": "переклад"
