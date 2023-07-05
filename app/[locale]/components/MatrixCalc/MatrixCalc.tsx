@@ -3,6 +3,7 @@ import { useState } from "react";
 import DataInput from "./DataInput/DataInput";
 import Matrix from "./Matrix/Matrix";
 import { OutputData } from "../../helper/calcData";
+import MatrixTable from "./MatrixTable/MatrixTable";
 
 const MatrixCalc = () => {
   const [showMatrix, setShowMatrix] = useState(false);
@@ -12,13 +13,18 @@ const MatrixCalc = () => {
     year: 1993,
   });
   return (
-    <section>
+    <section className="section">
       <div className="container">
         <DataInput
           setShowMatrix={setShowMatrix}
           setMatrixData={setMatrixData}
         />
-        {showMatrix && <Matrix matrixData={matrixData} />}
+        {showMatrix && (
+          <>
+            <Matrix matrixData={matrixData} />
+            <MatrixTable matrixData={matrixData} />
+          </>
+        )}
       </div>
     </section>
   );

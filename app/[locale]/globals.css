@@ -4,6 +4,7 @@
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+    --cormorant: 'Cormorant'
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -113,5 +114,15 @@ a {
   }
   @media screen and (min-width: 1280px) {
     width: 1280px;
+  }
+}
+
+.section {
+  padding: 20px 0;
+  @media screen and (min-width: 768px) {
+    padding: 40px 0;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 40px 0;
   }
 }
