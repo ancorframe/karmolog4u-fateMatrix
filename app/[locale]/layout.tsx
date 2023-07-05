@@ -1,11 +1,17 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Cormorant } from "next/font/google";
 import { NextIntlClientProvider, useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { getTranslator } from "next-intl/server";
 import Header from "./_header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
+export const cormorant = Cormorant({
+  subsets: ["cyrillic"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--cormorant",
+});
 
 export async function generateMetadata({ params: { locale } }: any) {
   // While the `locale` is required, the namespace is optional and
@@ -42,19 +48,20 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
-    let messages;
-    try {
-      messages = (await import(`../../messages/${locale}.json`)).default;
-    } catch (error) {
-      notFound();
-    }
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
   return (
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        
-      <body className={inter.className}>
-        <Header/>{children}</body>
-              </NextIntlClientProvider>
+        <body className={`${inter.className} ${cormorant.variable}`}>
+          <Header />
+          {children}
+        </body>
+      </NextIntlClientProvider>
     </html>
   );
 }

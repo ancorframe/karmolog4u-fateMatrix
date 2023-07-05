@@ -15,12 +15,7 @@ type FormValues = {
 };
 
 const DataInput = ({ setShowMatrix, setMatrixData }: Props) => {
-  const {
-    register,
-    handleSubmit,
-    setValue,
-    formState: { errors },
-  } = useForm<FormValues>();
+  const { register, handleSubmit, setValue } = useForm<FormValues>();
 
   const onChange = (e: { target: { value: string } }) => {
     let inputDate = e.target.value.replace(/\D/g, "");
@@ -65,8 +60,7 @@ const DataInput = ({ setShowMatrix, setMatrixData }: Props) => {
       <label htmlFor="name" className={style.form__label}>
         Дата
       </label>
-      {errors.data && <p>{errors.data.message}</p>}
-      <button className={style.submitBtn} type="submit">
+      <button type="submit" className={style.submitBtn}>
         Рассчитать
       </button>
     </form>

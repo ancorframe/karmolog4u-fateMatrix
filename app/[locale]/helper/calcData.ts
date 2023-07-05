@@ -54,3 +54,126 @@ export const calculatedMatrixData = (date: DateObject): OutputData => {
   data.innerBottom = checkNum(data.center + data.bottom3);
   return data;
 };
+
+export const getTableList = (data: OutputData) => {
+  const {
+    day,
+    month,
+    year,
+    center,
+    left2,
+    top2,
+    left3,
+    top3,
+    innerLeft,
+    innerTop,
+    innerBottom,
+    innerRight,
+    right2,
+    right3,
+    bottom1,
+    bottom2,
+    bottom3,
+  } = data;
+  const result: any = {
+    list: [
+      {
+        chakraName: "Сахасрара",
+        physics: day,
+        energy: month,
+        emotions: "20",
+        color: "#E7CFFF",
+      },
+      {
+        chakraName: "Аджна",
+        physics: left2,
+        energy: top2,
+        emotions: "20",
+        color: "#C1BFFF",
+      },
+      {
+        chakraName: "Вишудха",
+        physics: left3,
+        energy: top3,
+        emotions: "20",
+        color: "#A0E2FF",
+      },
+      {
+        chakraName: "Анахата",
+        physics: innerLeft,
+        energy: innerTop,
+        emotions: "20",
+        color: "#B1FFC3",
+      },
+      {
+        chakraName: "Манипура",
+        physics: center,
+        energy: center,
+        emotions: "20",
+        color: "#FFFFAB",
+      },
+      {
+        chakraName: "Шаманская чакра / кристалл души",
+        physics: innerRight,
+        energy: innerBottom,
+        emotions: "20",
+        color: "#E3E3E3",
+      },
+      {
+        chakraName: "Свадхистана",
+        physics: right3,
+        energy: bottom3,
+        emotions: "20",
+        color: "#f8cb82",
+      },
+      {
+        chakraName: "Вместилище Души",
+        physics: right2,
+        energy: bottom2,
+        emotions: "20",
+        color: "#FFE39D",
+      },
+      {
+        chakraName: "Муладхара",
+        physics: year,
+        energy: bottom1,
+        emotions: "20",
+        color: "#FFA5A5",
+      },
+    ],
+  };
+  result.list.forEach(
+    (
+      { physics, energy }: { physics: number; energy: number },
+      index: number,
+      array: { emotions: number }[]
+    ) => {
+      array[index].emotions = checkNum(physics + energy);
+    }
+  );
+  result.physicsTotal = result.list.reduce(
+    (acc: number, { physics }: { physics: number }): number => {
+      return physics + acc;
+    },
+    0
+  );
+  result.physicsTotal = checkNum(result.physicsTotal);
+
+  result.energyTotal = result.list.reduce(
+    (acc: number, { energy }: { energy: number }) => {
+      return energy + acc;
+    },
+    0
+  );
+  result.energyTotal = checkNum(result.energyTotal);
+
+  result.emotionsTotal = result.list.reduce(
+    (acc: number, { emotions }: { emotions: number }) => {
+      return acc + emotions;
+    },
+    0
+  );
+  result.emotionsTotal = checkNum(result.emotionsTotal);
+
+  return result;
+};

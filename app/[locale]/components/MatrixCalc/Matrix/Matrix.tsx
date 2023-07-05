@@ -1,11 +1,11 @@
 import Image from "next/image";
 import style from "./Matrix.module.css";
 import { OutputData } from "@/app/[locale]/helper/calcData";
-import Img from "@/public/assets/images/matrix.svg";
+import Img from "@/public/assets/images/matrix2.svg";
 
 const Matrix = ({ matrixData }: { matrixData: OutputData }) => {
   return (
-    <div>
+    <div style={{marginBottom: '40px'}}>
       <div className={style.matrix_container}>
         <Image
           src={Img}
@@ -13,23 +13,57 @@ const Matrix = ({ matrixData }: { matrixData: OutputData }) => {
           fill
           sizes="(max-width: 768px) 100%, (max-width: 1279.9px) 400px, (min-width: 1280px) 1000px"
         />
-        <span>{matrixData.day}</span>
-        <span>{matrixData.month}</span>
-        <span>{matrixData.year}</span>
-        <span>{matrixData.bottom1}</span>
-        <span>{matrixData.center}</span>
-        <span>{matrixData.bottom3}</span>
-        <span>{matrixData.bottom2}</span>
-        <span>{matrixData.top3}</span>
-        <span>{matrixData.top2}</span>
-        <span>{matrixData.left3}</span>
-        <span>{matrixData.left2}</span>
-        <span>{matrixData.right3}</span>
-        <span>{matrixData.right2}</span>
-        <span>{matrixData.innerTop}</span>
-        <span>{matrixData.innerLeft}</span>
-        <span>{matrixData.innerRight}</span>
-        <span>{matrixData.innerBottom}</span>
+        <span className={`${style.matrix_text} ${style.day}`}>
+          {matrixData.day}
+        </span>
+        <span className={`${style.matrix_text} ${style.month}`}>
+          {matrixData.month}
+        </span>
+        <span className={`${style.matrix_text} ${style.year}`}>
+          {matrixData.year}
+        </span>
+        <span className={`${style.matrix_text} ${style.bottom1}`}>
+          {matrixData.bottom1}
+        </span>
+        <span className={`${style.matrix_text} ${style.center}`}>
+          {matrixData.center}
+        </span>
+        <span className={`${style.matrix_text} ${style.bottom3}`}>
+          {matrixData.bottom3}
+        </span>
+        <span className={`${style.matrix_text} ${style.bottom2}`}>
+          {matrixData.bottom2}
+        </span>
+        <span className={`${style.matrix_text} ${style.top3}`}>
+          {matrixData.top3}
+        </span>
+        <span className={`${style.matrix_text} ${style.top2}`}>
+          {matrixData.top2}
+        </span>
+        <span className={`${style.matrix_text} ${style.left3}`}>
+          {matrixData.left3}
+        </span>
+        <span className={`${style.matrix_text} ${style.left2}`}>
+          {matrixData.left2}
+        </span>
+        <span className={`${style.matrix_text} ${style.right3}`}>
+          {matrixData.right3}
+        </span>
+        <span className={`${style.matrix_text} ${style.right2}`}>
+          {matrixData.right2}
+        </span>
+        <span className={`${style.matrix_text} ${style.innerTop}`}>
+          {matrixData.innerTop}
+        </span>
+        <span className={`${style.matrix_text} ${style.innerLeft}`}>
+          {matrixData.innerLeft}
+        </span>
+        <span className={`${style.matrix_text} ${style.innerRight}`}>
+          {matrixData.innerRight}
+        </span>
+        <span className={`${style.matrix_text} ${style.innerBottom}`}>
+          {matrixData.innerBottom}
+        </span>
       </div>
     </div>
   );

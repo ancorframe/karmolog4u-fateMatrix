@@ -1,7 +1,6 @@
 .matrix_container {
   position: relative;
-  min-height: 700px;
-  /* width: 290px;
+  width: 290px;
   height: 290px;
   @media screen and (min-width: 768px) {
     width: 728px;
@@ -10,5 +9,105 @@
   @media screen and (min-width: 1280px) {
     width: 700px;
     height: 700px;
-  } */
+  }
+}
+
+.matrix_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  font-family: var(--cormorant);
+  position: absolute;
+  color: #fff;
+}
+.day {
+  top: 45.5%;
+  left: 0%;
+}
+
+.month {
+  top: 0%;
+  left: 45.8%;
+}
+
+.year {
+  top: 46%;
+  left: 92.8%;
+}
+
+.bottom1 {
+  top: 91.8%;
+  left: 45.8%;
+}
+
+.center {
+  top: 45.2%;
+  left: 45.8%;
+  mix-blend-mode: difference;
+  font-size: 18px;
+}
+
+.bottom3 {
+  top: 78.9%;
+  left: 45.8%;
+}
+
+.bottom2 {
+  top: 84.9%;
+  left: 45.8%;
+}
+
+.top2 {
+  top: 6%;
+  left: 45.8%;
+}
+
+.top3 {
+  top: 13%;
+  left: 45.8%;
+}
+
+.left2 {
+  top: 46.3%;
+  left: 6.5%;
+}
+
+.left3 {
+  top: 45.8%;
+  left: 13.4%;
+}
+
+.right2 {
+  top: 46.2%;
+  left: 86.2%;
+}
+
+.right3 {
+  top: 45.8%;
+  left: 79.2%;
+}
+
+.innerTop {
+  top: 22.2%;
+  left: 45.8%;
+  color: #000;
+}
+
+.innerLeft {
+  top: 45.9%;
+  left: 22.2%;
+  color: #000;
+}
+
+.innerRight {
+  top: 45.8%;
+  left: 70.1%;
+}
+
+.innerBottom {
+  top: 69.5%;
+  left: 45.8%;
 }
