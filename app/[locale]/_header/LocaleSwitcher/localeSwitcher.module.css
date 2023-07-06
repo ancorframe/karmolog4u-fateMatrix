@@ -30,6 +30,10 @@
   border: 0;
   cursor: pointer;
   background-color: inherit;
+  color: #f4f3f1;
+  @media (prefers-color-scheme: dark) {
+    color: #f4f3f1;
+  }
 }
 
 .btn::after {
@@ -43,4 +47,8 @@
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
+  color: #f4f3f1;
+  @media (prefers-color-scheme: dark) {
+    color: #f4f3f1;
+  }
 }

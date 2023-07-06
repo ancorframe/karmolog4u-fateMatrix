@@ -25,6 +25,10 @@
   flex: 3;
   font-size: 11px;
   text-align: center;
+  color: #000;
+  @media (prefers-color-scheme: dark) {
+    color: #000;
+  }
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
