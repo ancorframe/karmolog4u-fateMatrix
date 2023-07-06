@@ -55,7 +55,7 @@ export const calculatedMatrixData = (date: DateObject): OutputData => {
   return data;
 };
 
-export const getTableList = (data: OutputData) => {
+export const getTableList = (data: OutputData, lng: string) => {
   const {
     day,
     month,
@@ -92,7 +92,7 @@ export const getTableList = (data: OutputData) => {
         color: "#C1BFFF",
       },
       {
-        chakraName: "Вишудха",
+        chakraName: lng === "uk" ? "Вішудха" : "Вишудха",
         physics: left3,
         energy: top3,
         emotions: "20",
@@ -106,28 +106,31 @@ export const getTableList = (data: OutputData) => {
         color: "#B1FFC3",
       },
       {
-        chakraName: "Манипура",
+        chakraName: lng === "uk" ? "Маніпура" : "Манипура",
         physics: center,
         energy: center,
         emotions: "20",
         color: "#FFFFAB",
       },
       {
-        chakraName: "Шаманская чакра / кристалл души",
+        chakraName:
+          lng === "uk"
+            ? "Шаманська чакра / кристал душі"
+            : "Шаманская чакра / кристалл души",
         physics: innerRight,
         energy: innerBottom,
         emotions: "20",
         color: "#E3E3E3",
       },
       {
-        chakraName: "Свадхистана",
+        chakraName: lng === "uk" ? "Свадхістана" : "Свадхистана",
         physics: right3,
         energy: bottom3,
         emotions: "20",
         color: "#f8cb82",
       },
       {
-        chakraName: "Вместилище Души",
+        chakraName: lng === "uk" ? "Містище Душі" : "Вместилище Души",
         physics: right2,
         energy: bottom2,
         emotions: "20",
