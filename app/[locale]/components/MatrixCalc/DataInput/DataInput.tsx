@@ -1,5 +1,6 @@
 "use client";
 import { useForm } from "react-hook-form";
+import { useTranslations } from "next-intl";
 import style from "./DataInput.module.css";
 import {
   OutputData,
@@ -16,6 +17,7 @@ type FormValues = {
 
 const DataInput = ({ setShowMatrix, setMatrixData }: Props) => {
   const { register, handleSubmit, setValue } = useForm<FormValues>();
+  const t = useTranslations("Matrix");
 
   const onChange = (e: { target: { value: string } }) => {
     let inputDate = e.target.value.replace(/\D/g, "");
@@ -50,7 +52,7 @@ const DataInput = ({ setShowMatrix, setMatrixData }: Props) => {
         placeholder="Дата"
         {...register("data", {
           onChange: onChange,
-          required: { value: true, message: "Введите дату" },
+          required: { value: true, message: t("dataInputTequired") },
           pattern: {
             value: /^\d{2}\.\d{2}\.\d{4}$/,
             message: "Введите дату в формате dd.mm.yyyy",
@@ -61,7 +63,7 @@ const DataInput = ({ setShowMatrix, setMatrixData }: Props) => {
         Дата
       </label>
       <button type="submit" className={style.submitBtn}>
-        Рассчитать
+        {t("calculate")}
       </button>
     </form>
   );

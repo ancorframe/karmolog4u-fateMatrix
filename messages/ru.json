@@ -24,5 +24,15 @@
       "first": "Расчет девятичакровой карты здоровья",
       "second": "в «Матрице Судьбы»"
     }
+  },
+  "Matrix": {
+    "dataInputTequired": "Введите дату",
+    "calculate": "Рассчитать",
+    "matrixTable": {
+      "physic": "Физика",
+      "energy": "Энергия",
+      "emotion": "Эмоции",
+      "result": "Итог"
+    }
   }
 }
