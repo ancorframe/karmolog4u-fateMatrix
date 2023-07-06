@@ -3,12 +3,9 @@
   width: 290px;
   height: 290px;
   @media screen and (min-width: 768px) {
-    width: 728px;
-    height: 728px;
-  }
-  @media screen and (min-width: 1280px) {
     width: 700px;
     height: 700px;
+    margin: 0 auto;
   }
 }
 
@@ -22,25 +19,46 @@
   font-family: var(--cormorant);
   position: absolute;
   color: #fff;
+  @media screen and (min-width: 768px) {
+    width: 30px;
+    height: 30px;
+    font-size: 32px;
+  }
 }
 .day {
   top: 45.5%;
   left: 0%;
+  @media screen and (min-width: 768px) {
+    top: 47.4%;
+    left: 1.1%;
+  }
 }
 
 .month {
   top: 0%;
   left: 45.8%;
+  @media screen and (min-width: 768px) {
+    top: 1.1%;
+    left: 47%;
+  }
 }
 
 .year {
   top: 46%;
   left: 92.8%;
+  @media screen and (min-width: 768px) {
+    top: 47.4%;
+    left: 94.2%;
+  }
 }
 
 .bottom1 {
   top: 91.8%;
   left: 45.8%;
+  @media screen and (min-width: 768px) {
+    top: 92.8%;
+    left: 47%;
+  }
 }
 
 .center {
@@ -48,66 +66,119 @@
   left: 45.8%;
   mix-blend-mode: difference;
   font-size: 18px;
+  @media screen and (min-width: 768px) {
+    top: 46.8%;
+    left: 47%;
+    font-size: 38px;
+  }
 }
 
 .bottom3 {
   top: 78.9%;
   left: 45.8%;
+  @media screen and (min-width: 768px) {
+    top: 80.3%;
+    left: 46.9%;
+  }
 }
 
 .bottom2 {
   top: 84.9%;
   left: 45.8%;
+  @media screen and (min-width: 768px) {
+    top: 86%;
+    left: 47.2%;
+  }
 }
 
 .top2 {
   top: 6%;
   left: 45.8%;
+  @media screen and (min-width: 768px) {
+    top: 7.5%;
+    left: 46.8%;
+  }
 }
 
 .top3 {
   top: 13%;
   left: 45.8%;
+  @media screen and (min-width: 768px) {
+    top: 14.5%;
+    left: 47.2%;
+  }
 }
 
 .left2 {
   top: 46.3%;
   left: 6.5%;
+  @media screen and (min-width: 768px) {
+    top: 47.2%;
+    left: 7.8%;
+  }
 }
 
 .left3 {
   top: 45.8%;
   left: 13.4%;
+  @media screen and (min-width: 768px) {
+    top: 47.4%;
+    left: 14.6%;
+  }
 }
 
 .right2 {
   top: 46.2%;
   left: 86.2%;
+  @media screen and (min-width: 768px) {
+    top: 47.4%;
+    left: 87.6%;
+  }
 }
 
 .right3 {
   top: 45.8%;
   left: 79.2%;
+  @media screen and (min-width: 768px) {
+    top: 46.8%;
+    left: 80.7%;
+  }
 }
 
 .innerTop {
   top: 22.2%;
   left: 45.8%;
   color: #000;
+  @media screen and (min-width: 768px) {
+    top: 23.7%;
+    left: 47%;
+  }
 }
 
 .innerLeft {
   top: 45.9%;
   left: 22.2%;
   color: #000;
+  @media screen and (min-width: 768px) {
+    top: 47.4%;
+    left: 23.7%;
+  }
 }
 
 .innerRight {
   top: 45.8%;
   left: 70.1%;
+  @media screen and (min-width: 768px) {
+    top: 47.2%;
+    left: 71.5%;
+  }
 }
 
 .innerBottom {
   top: 69.5%;
   left: 45.8%;
+  @media screen and (min-width: 768px) {
+    top: 71.4%;
+    left: 47.1%;
+  }
 }
