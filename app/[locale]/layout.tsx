@@ -40,13 +40,13 @@ export async function generateMetadata({ params: { locale } }: any) {
       images: [
         {
           url: `/app/opengraph-image.jpg`,
-          width: 800,
-          height: 800,
+          width: 624,
+          height: 630,
         },
         {
           url: "/app/opengraph-image.jpg",
           width: 1800,
-          height: 1800,
+          height: 1200,
           alt: "Custom alt",
         },
       ],
