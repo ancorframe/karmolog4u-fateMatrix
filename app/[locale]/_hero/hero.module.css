@@ -50,15 +50,23 @@
   font-size: 25px;
   text-transform: uppercase;
   width: max-content;
-    @media screen and (min-width: 768px) {
-  font-size: 40px;
+  color: #f4f3f1;
+  @media (prefers-color-scheme: dark) {
+    color: #f4f3f1;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
   }
 }
 
 .title_author {
   font-size: 15px;
+  color: #f4f3f1;
+  @media (prefers-color-scheme: dark) {
+    color: #f4f3f1;
+  }
   @media screen and (min-width: 768px) {
-  font-size: 33px;
+    font-size: 33px;
   }
 }
 .title_author::after {
@@ -83,7 +91,7 @@
   position: relative;
   z-index: 4;
   max-width: 350px;
-  top: 60%;
+  top: 63%;
   left: 50vw;
   @media screen and (min-width: 768px) {
     max-width: 650px;
@@ -100,6 +108,10 @@
   font-size: 25px;
   text-align: center;
   white-space: pre-wrap;
+  color: #f4f3f1;
+  @media (prefers-color-scheme: dark) {
+    color: #f4f3f1;
+  }
   @media screen and (min-width: 768px) {
     font-size: 45px;
   }

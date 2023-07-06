@@ -1,9 +1,6 @@
 .main {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh; */
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(180deg, #2f2f2f 0%, #597060 100%);
+  }
   background: linear-gradient(180deg, #2f2f2f 0%, #597060 100%);
 }
