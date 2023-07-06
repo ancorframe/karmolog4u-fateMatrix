@@ -4,6 +4,7 @@ import Image from "next/legacy/image";
 import { useTranslations } from "next-intl";
 import heroMob from "../../../public/assets/images/hero_bg_mob.webp";
 import hero from "../../../public/assets/images/hero_bg.webp";
+
 function Hero() {
   const t = useTranslations("Hero");
   return (
@@ -12,7 +13,7 @@ function Hero() {
         <Image
           priority
           src={hero}
-          alt="Follow us on Twitter"
+          alt="Hero background"
           className={styles.hero_img}
           layout="fill"
           objectFit="cover"
@@ -24,7 +25,7 @@ function Hero() {
         <Image
           priority
           src={heroMob}
-          alt="Follow us on Twitter"
+          alt="Hero background"
           className={styles.hero_img}
           layout="fill"
           objectFit="cover"

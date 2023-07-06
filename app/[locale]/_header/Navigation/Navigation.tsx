@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import styles from "./navigation.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import logo from "../../../../public/assets/images/logo.png";
 
 const nav = [
   { t: "services", link: "" },
@@ -19,7 +20,7 @@ function Navigation() {
   return (
     <nav className={styles.nav}>
       <Image
-        src={"/assets/images/Vector.png"}
+        src={logo}
         alt="Logo"
         width={70}
         height={70}
