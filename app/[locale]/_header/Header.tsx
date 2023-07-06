@@ -16,7 +16,7 @@ function Header() {
           <Image
             priority
             src={burgerIcon}
-            alt="Follow us on Twitter"
+            alt="Open menu"
             className={styles.burger_icon}
           />
         </button>

@@ -29,25 +29,25 @@ export async function generateMetadata({ params: { locale } }: any) {
         "uk-UA": `${process.env.NEXT_BASE_URL}/ua/`,
       },
     },
-    verification: {
-      google: "google-site-verification=id",
-    },
+    // verification: {
+    //   google: "google-site-verification=id",
+    // },
     openGraph: {
       title: t("title"),
       description: t("description"),
       url: process.env.NEXT_BASE_URL,
-      siteName: "Next.js",
+      siteName: "Karmolog4u",
       images: [
         {
-          url: "/public/assets/images/opengraph-image.png",
+          url: `/app/opengraph-image.png`,
           width: 800,
-          height: 600,
+          height: 800,
         },
         {
-          url: "/public/assets/images/opengraph-image.png",
+          url: "/app/opengraph-image.png",
           width: 1800,
-          height: 1600,
-          alt: "My custom alt",
+          height: 1800,
+          alt: "Custom alt",
         },
       ],
       locale: locale,
@@ -73,9 +73,9 @@ export async function generateMetadata({ params: { locale } }: any) {
       title: t("title"),
       description: t("description"),
       siteId: "1467726470533754880",
-      creator: "@nextjs",
+      creator: "@Karmolog4u",
       creatorId: "1467726470533754880",
-      images: ["/public/assets/images/twitter-image.png"],
+      images: ["/app/twitter-image.png"],
     },
   };
 }

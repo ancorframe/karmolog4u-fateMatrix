@@ -17,12 +17,28 @@ type SocialLink = {
 };
 
 const socialLinks: SocialLink[] = [
-  { url: "", icon: instIcon, alt: "Instagram" },
-  { url: "", icon: telegIcon, alt: "Telegram" },
-  { url: "", icon: tiktokIcon, alt: "TikTok" },
-  { url: "", icon: youtubeIcon, alt: "YouTube" },
-  { url: "", icon: waIcon, alt: "WhatsApp" },
-  { url: "", icon: viberIcon, alt: "Viber" },
+  {
+    url: "https://www.instagram.com/karmolog4u/",
+    icon: instIcon,
+    alt: "Instagram",
+  },
+  { url: "https://t.me/karmolog4u", icon: telegIcon, alt: "Telegram" },
+  {
+    url: "https://www.tiktok.com/@karmologist?_t=8YIutpJO0g9&_r=1",
+    icon: tiktokIcon,
+    alt: "TikTok",
+  },
+  {
+    url: "https://www.youtube.com/@user-qi5qi3vr9k",
+    icon: youtubeIcon,
+    alt: "YouTube",
+  },
+  {
+    url: "https://api.whatsapp.com/send/?phone=380678696760&text&type=phone_number&app_absent=0",
+    icon: waIcon,
+    alt: "WhatsApp",
+  },
+  { url: "viber://chat?number=%2B380678696760", icon: viberIcon, alt: "Viber" },
 ];
 
 interface Props {
@@ -45,7 +61,7 @@ function MobileNavigation({ isOpen, setIsOpen }: Props) {
         <ul className={styles.social_list}>
           {socialLinks.map(({ url, icon, alt }, index) => (
             <li key={index}>
-              <a href={url} target="_blank">
+              <a href={url} target="_blank" rel="noreferrer">
                 <Image
                   priority
                   src={icon}
