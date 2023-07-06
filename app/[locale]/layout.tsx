@@ -6,7 +6,7 @@ import { getTranslator } from "next-intl/server";
 import Header from "./_header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
-export const cormorant = Cormorant({
+const cormorant = Cormorant({
   subsets: ["cyrillic"],
   weight: ["400", "700"],
   style: ["normal", "italic"],
