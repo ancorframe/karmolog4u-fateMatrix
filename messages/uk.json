@@ -4,10 +4,25 @@
     "description": "description"
   },
   "Locale": {
-    "ru": "Російська",
-    "uk": "Українська"
+    "ru": "RU",
+    "uk": "UA"
   },
-  "FateMatrix": {
-    "title": "переклад"
+  "Navigation": {
+    "services": "Послуги",
+    "learning": "Навчання",
+    "shop": "Магазин",
+    "blog": "Блог",
+    "calculator": "Калькулятор",
+    "cabinet": "Особистий Кабінет"
+  },
+  "Hero": {
+    "title": {
+      "about": "студія трансформації",
+      "author": "сергія скляренко"
+    },
+    "about":{
+      "first":"Розрахунок дев'ятишарової карти здоров'я",
+      "second":"в «Матриці долі»"
+    } 
   }
 }

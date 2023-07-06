@@ -4,10 +4,25 @@
     "description": "description"
   },
   "Locale": {
-    "ru": "кацапський",
-    "uk": "Українська"
+    "ru": "RU",
+    "uk": "UA"
   },
-  "FateMatrix": {
-    "title": "перевод"
+  "Navigation": {
+    "services": "Услуги",
+    "learning": "Обучение",
+    "shop": "Магазин",
+    "blog": "Блог",
+    "calculator": "Калькулятор",
+    "cabinet": "Личный Кабинет"
+  },
+  "Hero": {
+    "title": {
+      "about": "студия трансформации",
+      "author": "сергея стекляренко"
+    },
+    "about": {
+      "first": "Расчет девятичакровой карты здоровья",
+      "second": "в «Матрице Судьбы»"
+    }
   }
 }

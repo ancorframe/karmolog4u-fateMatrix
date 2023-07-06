@@ -1,0 +1,46 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown_list {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translateY(0);
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown_list__open {
+  opacity: 1;
+  overflow: auto;
+  pointer-events: all;
+  transform: translateY(100%);
+}
+
+.btn {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.btn::after {
+  content: "\25BC";
+  display: inline-block;
+  transform: scale(0.6);
+}
+
+.link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
