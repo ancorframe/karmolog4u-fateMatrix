@@ -5,7 +5,7 @@ import Img from "@/public/assets/images/matrix2.svg";
 
 const Matrix = ({ matrixData }: { matrixData: OutputData }) => {
   return (
-    <div style={{marginBottom: '40px'}}>
+    <div style={{ margin: "0 auto 40px" }}>
       <div className={style.matrix_container}>
         <Image
           src={Img}
