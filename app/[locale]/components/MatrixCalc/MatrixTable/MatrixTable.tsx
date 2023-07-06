@@ -74,7 +74,7 @@ const MatrixTable = ({ matrixData }: { matrixData: OutputData }) => {
           className={style.tableElement}
           style={{ borderTop: "1px solid black" }}
         >
-          <p style={{ fontStyle: "italic" }}>
+          <p className={style.tableText} style={{ fontStyle: "italic" }}>
             {t("result")}: {tableList.emotionsTotal}
           </p>
         </li>
