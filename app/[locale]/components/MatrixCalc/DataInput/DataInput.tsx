@@ -42,6 +42,11 @@ const DataInput = ({ setShowMatrix, setMatrixData }: Props) => {
       year: +year,
     });
     setMatrixData(result);
+    const section = document.getElementById(`matrix`);
+    if (section) {
+      const topOffset = section.offsetTop - 100;
+      window.scrollTo({ top: topOffset, behavior: "smooth" });
+    }
   };
   return (
     <form onSubmit={handleSubmit(onFormSubmit)} className={style.form}>
