@@ -37,7 +37,7 @@
   flex-direction: column;
   width: max-content;
   align-items: center;
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 949.5px) {
     transform: translateX(-50%);
   }
   @media screen and (min-width: 950px) {
@@ -46,14 +46,17 @@
 }
 
 .title_about {
+  color: #f4f3f1;
+  font-family: var(--cormorant);
   display: inline-block;
   font-size: 25px;
   text-transform: uppercase;
   width: max-content;
-  color: #f4f3f1;
+
+  /* color: #f4f3f1;
   @media (prefers-color-scheme: dark) {
     color: #f4f3f1;
-  }
+  } */
   @media screen and (min-width: 768px) {
     font-size: 40px;
   }
@@ -73,18 +76,26 @@
   display: inline-block;
   content: " ";
   width: 60px;
-  height: 2px;
+  height: 1px;
   background-color: #fff;
-  vertical-align: middle;
+  margin-bottom: 4px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+    height: 2px;
+  }
 }
 
 .title_author::before {
-  vertical-align: middle;
   display: inline-block;
   content: " ";
   width: 60px;
-  height: 2px;
+  height: 1px;
   background-color: #fff;
+  margin-bottom: 4px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+    height: 2px;
+  }
 }
 
 .desc {
@@ -96,7 +107,7 @@
   @media screen and (min-width: 768px) {
     max-width: 650px;
   }
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 949.5px) {
     transform: translateX(-50%);
   }
   @media screen and (min-width: 950px) {
@@ -105,7 +116,8 @@
 }
 
 .about {
-  font-size: 25px;
+  font-family: var(--cormorant);
+  font-size: 27px;
   text-align: center;
   white-space: pre-wrap;
   color: #f4f3f1;
@@ -113,6 +125,6 @@
     color: #f4f3f1;
   }
   @media screen and (min-width: 768px) {
-    font-size: 45px;
+    font-size: 55px;
   }
 }
