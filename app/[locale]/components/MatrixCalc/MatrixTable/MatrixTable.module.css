@@ -9,8 +9,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
+  height: 40px;
   padding: 0 10px;
+  @media screen and (min-width: 768px) {
+    height: 50px;
+  }
+  @media screen and (min-width: 1280px) {
+  }
 }
 
 .tableText {
@@ -19,5 +24,11 @@
   align-items: center;
   flex: 3;
   font-size: 11px;
-  font-family: var(--cormorant);
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+  }
 }
