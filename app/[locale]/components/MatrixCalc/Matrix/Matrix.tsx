@@ -1,11 +1,20 @@
+"use client";
+import { useEffect } from "react";
 import Image from "next/image";
 import style from "./Matrix.module.css";
 import { OutputData } from "@/app/[locale]/helper/calcData";
 import Img from "@/public/assets/images/matrix2.svg";
 
 const Matrix = ({ matrixData }: { matrixData: OutputData }) => {
+  useEffect(() => {
+    const section = document.getElementById(`matrix`);
+    if (section) {
+      const topOffset = section.offsetTop - 100;
+      window.scrollTo({ top: topOffset, behavior: "smooth" });
+    }
+  }, []);
   return (
-    <div style={{ margin: "0 auto 40px" }}>
+    <div style={{ margin: "0 auto 40px" }} id="matrix">
       <div className={style.matrix_container}>
         <Image
           src={Img}
