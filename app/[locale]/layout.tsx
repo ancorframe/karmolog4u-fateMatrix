@@ -39,12 +39,12 @@ export async function generateMetadata({ params: { locale } }: any) {
       siteName: "Karmolog4u",
       images: [
         {
-          url: `/app/opengraph-image.png`,
+          url: `/app/opengraph-image.jpg`,
           width: 800,
           height: 800,
         },
         {
-          url: "/app/opengraph-image.png",
+          url: "/app/opengraph-image.jpg",
           width: 1800,
           height: 1800,
           alt: "Custom alt",
@@ -75,7 +75,7 @@ export async function generateMetadata({ params: { locale } }: any) {
       siteId: "1467726470533754880",
       creator: "@Karmolog4u",
       creatorId: "1467726470533754880",
-      images: ["/app/twitter-image.png"],
+      images: ["/app/twitter-image.jpg"],
     },
   };
 }
