@@ -1,6 +1,9 @@
 .main {
   @media (prefers-color-scheme: dark) {
-    background: linear-gradient(180deg, #2f2f2f 0%, #597060 100%);
+    /* background: linear-gradient(180deg, #2f2f2f 0%, #597060 100%); */
+    background-color: rgb(97, 98, 133);
   }
-  background: linear-gradient(180deg, #2f2f2f 0%, #597060 100%);
+  /* background: linear-gradient(180deg, #2f2f2f 0%, #597060 100%); */
+
+  background-color: rgb(97, 98, 133);
 }

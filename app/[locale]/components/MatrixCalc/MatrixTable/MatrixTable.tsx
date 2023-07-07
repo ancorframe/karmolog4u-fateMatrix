@@ -70,14 +70,6 @@ const MatrixTable = ({ matrixData }: { matrixData: OutputData }) => {
           <p className={style.tableText}>{tableList.energyTotal}</p>
           <p className={style.tableText}>{tableList.emotionsTotal}</p>
         </li>
-        <li
-          className={style.tableElement}
-          style={{ borderTop: "1px solid black" }}
-        >
-          <p className={style.tableText} style={{ fontStyle: "italic" }}>
-            {t("result")}: {tableList.emotionsTotal}
-          </p>
-        </li>
       </ul>
     </div>
   );
