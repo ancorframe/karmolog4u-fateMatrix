@@ -33,15 +33,17 @@ function Hero() {
           placeholder="blur"
         />
       </div>
-      <div className={styles.title}>
-        <p className={styles.title_about}>{t("title.about")}</p>
-        <p className={`${styles.title_about} ${styles.title_author}`}>
-          &nbsp;{t("title.author")}&nbsp;
-        </p>
-      </div>
-      <div className={styles.desc}>
-        <p className={styles.about}>{t("about.first")}</p>
-        <p className={styles.about}>{t("about.second")}</p>
+      <div className={styles.container}>
+        <div className={styles.title}>
+          <p className={styles.title_about}>{t("title.about")}</p>
+          <p className={`${styles.title_about} ${styles.title_author}`}>
+            &nbsp;{t("title.author")}&nbsp;
+          </p>
+        </div>
+        <div className={styles.desc}>
+          <p className={styles.about}>{t("about.first")}</p>
+          <p className={styles.about}>{t("about.second")}</p>
+        </div>
       </div>
     </section>
   );

@@ -1,15 +1,53 @@
 import "./globals.css";
-import { Inter, Cormorant } from "next/font/google";
+import { Cormorant } from "next/font/google";
 import { NextIntlClientProvider, useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { getTranslator } from "next-intl/server";
 import Header from "./_header/Header";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const futuraPt = localFont({
+  src: [
+    {
+      path: "../../public/assets/fonts/FuturaPT-Light.woff",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/assets/fonts/FuturaPT-Book.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/assets/fonts/FuturaPT-Medium.woff",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/assets/fonts/FuturaPT-Heavy.woff",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/assets/fonts/FuturaPT-Bold.woff",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/assets/fonts/FuturaPT-ExtraBold.woff",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  variable: "--futuraPt",
+});
+
 const cormorant = Cormorant({
   subsets: ["cyrillic"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "700"],
   style: ["normal", "italic"],
+  display: "swap",
   variable: "--cormorant",
 });
 
@@ -19,23 +57,20 @@ export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslator(locale, "Metadata");
 
   return {
-    // metadataBase:new URL(''),
+    metadataBase: new URL("https://karmolog4u-fate-matrix.vercel.app"),
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: process.env.NEXT_BASE_URL,
+      canonical: "/",
       languages: {
-        "ru-RU": `${process.env.NEXT_BASE_URL}/ru/`,
-        "uk-UA": `${process.env.NEXT_BASE_URL}/ua/`,
+        "ru-RU": `/ru/`,
+        "uk-UA": `/ua/`,
       },
     },
-    // verification: {
-    //   google: "google-site-verification=id",
-    // },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: process.env.NEXT_BASE_URL,
+      url:'/',
       siteName: "Karmolog4u",
       images: [
         {
@@ -67,7 +102,6 @@ export async function generateMetadata({ params: { locale } }: any) {
       },
     },
     themeColor: "black",
-    // manifest: "https://nextjs.org/manifest.json",
     twitter: {
       card: "summary_large_image",
       title: t("title"),
@@ -102,7 +136,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <body className={`${inter.className} ${cormorant.variable}`}>
+        <body className={`${futuraPt.className} ${cormorant.variable}`}>
           <Header />
           {children}
         </body>
