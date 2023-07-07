@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LocaleSwitcher from "./LocaleSwitcher/LocaleSwitcher";
 import styles from "./header.module.css";
 import Navigation from "./Navigation/Navigation";
@@ -9,6 +9,15 @@ import burgerIcon from "../../../public/assets/images/burger.svg";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  }, [isOpen]);
+
   return (
     <header className={styles.header}>
       <div className={styles.header_container}>

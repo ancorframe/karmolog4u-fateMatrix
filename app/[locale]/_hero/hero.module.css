@@ -37,10 +37,9 @@
   flex-direction: column;
   width: max-content;
   align-items: center;
-  @media screen and (max-width: 949.5px) {
-    transform: translateX(-50%);
-  }
+  transform: translateX(-50%);
   @media screen and (min-width: 950px) {
+    transform: translateX(0);
     left: 10vw;
   }
 }
@@ -104,14 +103,13 @@
   max-width: 350px;
   top: 60%;
   left: 50vw;
+  transform: translateX(-50%);
   @media screen and (min-width: 768px) {
     max-width: 650px;
   }
-  @media screen and (max-width: 949.5px) {
-    transform: translateX(-50%);
-  }
   @media screen and (min-width: 950px) {
     left: 6.5vw;
+    transform: translateX(0);
   }
 }
 

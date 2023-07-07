@@ -82,6 +82,7 @@
   overflow: hidden;
   outline: 1px solid #000000;
   cursor: pointer;
+  background: #ffffff;
   @media (prefers-color-scheme: dark) {
     background-color: #ffffff;
   }
