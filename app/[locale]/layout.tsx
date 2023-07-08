@@ -70,16 +70,16 @@ export async function generateMetadata({ params: { locale } }: any) {
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url:'/',
+      url: "/",
       siteName: "Karmolog4u",
       images: [
         {
-          url: `/app/opengraph-image.jpg`,
+          url: `/opengraph-image.jpg`,
           width: 624,
           height: 630,
         },
         {
-          url: "/app/opengraph-image.jpg",
+          url: "/opengraph-image.jpg",
           width: 1800,
           height: 1200,
           alt: "Custom alt",
@@ -109,8 +109,9 @@ export async function generateMetadata({ params: { locale } }: any) {
       siteId: "1467726470533754880",
       creator: "@Karmolog4u",
       creatorId: "1467726470533754880",
-      images: ["/app/twitter-image.jpg"],
+      images: ["/twitter-image.jpg"],
     },
+    manifest: "/manifest.json",
   };
 }
 
