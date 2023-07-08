@@ -112,6 +112,17 @@ export async function generateMetadata({ params: { locale } }: any) {
       images: ["/twitter-image.jpg"],
     },
     manifest: "/manifest.json",
+    icons: {
+      icon: "/icon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+      other: [
+        {
+          rel: "apple-touch-icon-precomposed",
+          url: "/apple-touch-icon-precomposed.png",
+        },
+      ],
+    },
   };
 }
 

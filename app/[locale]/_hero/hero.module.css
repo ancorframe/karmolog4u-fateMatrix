@@ -91,6 +91,7 @@
 }
 
 .title_author {
+  position: relative;
   font-size: 15px;
   color: #f4f3f1;
   @media (prefers-color-scheme: dark) {
@@ -102,26 +103,34 @@
 }
 .title_author::after {
   display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 100%;
   content: " ";
   width: 60px;
   height: 1px;
   background-color: #fff;
-  margin-bottom: 4px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 10px;
+}
+@media screen and (min-width: 830px) {
+  .title_author::after {
     height: 2px;
   }
 }
 
 .title_author::before {
+  position: absolute;
+  top: 50%;
+  right: 100%;
   display: inline-block;
   content: " ";
   width: 60px;
   height: 1px;
   background-color: #fff;
   margin-bottom: 4px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 10px;
+  transform: translateY(50%);
+}
+@media screen and (min-width: 830px) {
+  .title_author::before {
     height: 2px;
   }
 }
