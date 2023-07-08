@@ -4,13 +4,19 @@ import Hero from "./_hero/Hero";
 
 export const metadata = {
   icons: {
-    icon: "/icon.ico",
+    icon: "/favicon.ico",
     // shortcut: "/shortcut-icon.png",
     apple: "/apple-touch-icon.png",
-    other: {
-      rel: "apple-touch-icon-precomposed",
-      url: "/apple-touch-icon-precomposed.png",
-    },
+    other: [
+      {
+        rel: "apple-touch-icon-precomposed",
+        url: "/apple-touch-icon-precomposed.png",
+      },
+      {
+        rel: "icon",
+        url: "/icon.ico",
+      },
+    ],
   },
 };
 
